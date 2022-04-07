@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Minutes2Years {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int minutes;
+        System.out.print("Enter the no.of.minutes : ");
+        minutes = s.nextInt();
+        convert(minutes);
+    }
+
+    public static void convert(int minutes){
+        int hr,days,remaining,years;
+        hr = minutes / 60;
+        days = hr / 24;
+        years = days / 365;
+        remaining = days % 365;
+        System.out.println(years + " years and " + remaining + " days");
+    }
+}
